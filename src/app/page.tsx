@@ -1,7 +1,9 @@
-import Image from "next/image";
+import {AccessibilyBarViewModel} from "@/components/AccessibilityBar/accessibily-bar.view-model";
 
 export default function Home() {
   return (
-    <main></main>
+    <main>
+        <AccessibilyBarViewModel />
+    </main>
   );
 }

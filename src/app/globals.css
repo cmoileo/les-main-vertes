@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "../styles/color.css";
+@import "../components/AccessibilityBar/variable.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;

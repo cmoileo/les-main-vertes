@@ -1,14 +1,15 @@
 import {useEffect, useState} from "react";
+import {changeVariables} from "./change-variable";
 
 export const useAccessibilyBarViewModel = () => {
-    const [primaryColor, setPrimaryColor] = useState("red");
-    const colors = ["red", "blue", "green", "yellow", "purple"];
+    const [type, setType] = useState("red");
+    const types = ["Daltonyen", "Arthrose", "Parkinson"];
     useEffect(() => {
-        document.documentElement.style.setProperty("--primary-color", primaryColor);
-    }, [primaryColor]);
+        changeVariables(type)
+    }, [type]);
 
     return {
-        setPrimaryColor,
-        colors
+        setType,
+        types
     };
 }

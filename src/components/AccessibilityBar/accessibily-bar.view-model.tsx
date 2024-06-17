@@ -3,7 +3,7 @@ import {useAccessibilyBarViewModel} from "@/components/AccessibilityBar/accessib
 import {Popover, PopoverContent, PopoverTrigger} from "@/ui/popover.ui";
 
 export const AccessibilyBarViewModel = () => {
-    const {setPrimaryColor, colors} = useAccessibilyBarViewModel();
+    const {setType, types} = useAccessibilyBarViewModel();
     return (
         <main>
             <Popover>
@@ -12,8 +12,8 @@ export const AccessibilyBarViewModel = () => {
                 </PopoverTrigger>
                 <PopoverContent>
                     <div className={"flex gap-10"}>
-                        {colors.map((color) => (
-                            <button key={color} onClick={() => setPrimaryColor(color)}>{color}</button>
+                        {types.map((type) => (
+                            <button className={"text-black"} key={type} onClick={() => setType(type)}>{type}</button>
                         ))}
                     </div>
                 </PopoverContent>

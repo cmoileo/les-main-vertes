@@ -4,6 +4,7 @@ import {Popover, PopoverContent, PopoverTrigger} from "../../ui/popover.ui";
 
 export const AccessibilyBarViewModel = () => {
     const {setType, types} = useAccessibilyBarViewModel();
+
     return (
         <main>
             <Popover>

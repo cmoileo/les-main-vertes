@@ -21,6 +21,7 @@ type TypeKeys = keyof typeof types;
 
 const changeVariables = (type: TypeKeys) => {
     const variables = types[type];
+    if (!variables) return;
     for (const variableName of variableNames) {
         const value = variables[variableName];
         if (value) {

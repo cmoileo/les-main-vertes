@@ -1,6 +1,6 @@
 "use client"
-import {useAccessibilyBarViewModel} from "@/components/AccessibilityBar/accessibily-bar.component";
-import {Popover, PopoverContent, PopoverTrigger} from "@/ui/popover.ui";
+import {useAccessibilyBarViewModel} from "./accessibily-bar.component";
+import {Popover, PopoverContent, PopoverTrigger} from "../../ui/popover.ui";
 
 export const AccessibilyBarViewModel = () => {
     const {setType, types} = useAccessibilyBarViewModel();

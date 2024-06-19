@@ -5,6 +5,7 @@ import getLatestPosts from "../../../hook/getLatestsPost.ts";
 export default async function page({ params }: { params: { slug: string }}) {
     const postData: Post = await getPostData(params.slug);
     const lastPosts: Post[] = await getLatestPosts(3);
+    console.log("thumbnail",postData.thumbnail)
 
     const title = postData.title;
     const acfFields: any = postData.acfFields;

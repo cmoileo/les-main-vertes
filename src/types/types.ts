@@ -16,6 +16,7 @@ export interface Post {
     slug: string,
     acfFields: Object
     author: any
+    thumbnail: string
 }
 
 export type Product = {

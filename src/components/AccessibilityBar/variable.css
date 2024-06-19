@@ -4,5 +4,15 @@
     --primary-green: #00B55E;
     --primary-orange: #F28F3B;
     --primary-blue: #708AFF;
-    --primary-white: #FFFFFF
+    --primary-white: #FFFFFF;
+    --primary-beige: #FAF2EF;
+}
+
+.custom-stroke {
+    color: var(--primary-white);
+    text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
 }

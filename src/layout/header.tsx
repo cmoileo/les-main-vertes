@@ -8,8 +8,8 @@ export default async function MenuComponent() {
     const menu = await getMenu("top-left-1")
 
     return (
-        <header className={"bg-primary-white flex items-center justify-between rounded-[30px] pt-[12px] pb-[16px] pl-[25px] pr-[75px]"}>
-            <div className={"flex items-center gap-[22px]"}>
+        <header className={"flex items-center gap-[10px]"}>
+            <div className={"flex items-center gap-[10px] bg-primary-white rounded-[30px] w-[40%] px-[38px] py-[11px]"}>
                 <Image
                     src={Logo}
                     alt="Logo des mains vertes"
@@ -19,7 +19,7 @@ export default async function MenuComponent() {
                 ></Image>
                 <p className={"text-primary-green text-[18px] text-nowrap font-lexend font-semibold"}>EA Les Mains Vertes</p>
             </div>
-            <nav className="menu flex items-center gap-[40px]">
+            <nav className="menu flex items-center gap-[40px]  bg-primary-white px-[65px] rounded-[30px] w-full py-[40px]">
                 {menu.length > 0 && menu.map((item: MenuItem, i: number) => (
                     <ul key={i}>
                         <a href={item.url}>

@@ -1,3 +1,8 @@
 :root {
     --primary-color: red;
+    --primary-black: #000000;
+    --primary-green: #00B55E;
+    --primary-orange: #F28F3B;
+    --primary-blue: #708AFF;
+    --primary-white: #FFFFFF
 }

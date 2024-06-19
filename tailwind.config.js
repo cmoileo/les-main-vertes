@@ -16,6 +16,11 @@ module.exports = {
     extend: {
       colors: {
         "accent-1": "var(--primary-color)",
+        "primary-black": "var(--primary-black)",
+        "primary-white": "var(--primary-white)",
+        "primary-blue": "var(--primary-blue)",
+        "primary-orange": "var(--primary-orange)",
+        "primary-green": "var(--primary-green)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -69,6 +74,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        lexend: ['Lexend Exa', 'sans-serif'],
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

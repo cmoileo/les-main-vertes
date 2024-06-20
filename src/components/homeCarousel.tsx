@@ -12,7 +12,7 @@ export const HomeCarousel = (data: any) => {
 
     const titleBaseStyle = 'font-lexend text-white tracking-[-3px] text-[30px] text-primary-black font-semibold text-pretty'
     return (
-        <div className={cn(cellBaseStyle, "w-full px-[30px] h-[250px] flex items-center justify-between overflow-hidden")}>
+        <div className={cn(cellBaseStyle, "w-full px-[30px] h-[230px] flex items-center justify-between overflow-hidden")}>
             <svg onClick={() => {
                 if (!swiperRef.current) return
                 swiperRef.current.swiper.slidePrev()

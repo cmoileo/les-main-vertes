@@ -15,7 +15,7 @@ export default async function Home() {
     return (
         <main className={"flex gap-[10px]"}>
             <section className={columnBaseStyle}>
-                <div className={cn(cellBaseStyle, "w-full pl-[30px] pr-[60px] py-[25px] flex flex-col gap-[20px] h-[300px] align-center")}>
+                <div className={cn(cellBaseStyle, "w-full pl-[30px] pr-[60px] py-[25px] flex flex-col gap-[20px] h-[230px] align-center")}>
                     <h1 className={cn(titleBaseStyle)}>
                         {pageData.titretexte.titre}
                     </h1>
@@ -31,7 +31,7 @@ export default async function Home() {
                             <p className={titleBaseStyle}>Nos derniers articles</p>
                         </a>
                     </div>
-                    <a className={cn(cellBaseStyle, "flex cursor-pointer group relative h-[250px] flex-col gap-[20px] bg-primary-green p-[20px]")}>
+                    <a className={cn(cellBaseStyle, "flex cursor-pointer group relative h-[230px] flex-col gap-[10px] bg-primary-green p-[20px]")}>
                         <p className={cn(descriptionbaseStyle, "text-white")}>Article - 19/06/2024</p>
                         <h3 className={cn(titleBaseStyle, "text-white")}>Comment devenir bénévole ?</h3>
                         <svg className={"transition absolute bottom-[20px] left-[20px] group-hover:translate-x-[-100%] group-hover:left-[calc(100%-20px)]"} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,8 +46,9 @@ export default async function Home() {
             </section>
 
             <section className={columnBaseStyle}>
-                <img className={"rounded-[30px] object-cover h-[300px]"} src={pageData.image_2.image} alt={pageData.image_2.alt}/>
-                <div className={"flex gap-[10px] w-full h-[250px]"}>
+                <img className={"rounded-[30px] object-cover min-h-[230px]"} src={pageData.image_2.image}
+                     alt={pageData.image_2.alt}/>
+                <div className={"flex gap-[10px] w-full min-h-[230px]"}>
                     <div className={"w-1/2 h-full"}>
                         <PageLink data={pageData.lien_vers_page_2}/>
                     </div>
@@ -55,9 +56,18 @@ export default async function Home() {
                         <PageLink data={pageData.lien_vers_page_3}/>
                     </div>
                 </div>
+                <div className={"w-full h-fill"}>
+                    <video poster={pageData.video.cover} className={"rounded-[30px] object-cover w-full h-full"}>
+                        <source src={pageData.video.video}></source>
+                    </video>
+                </div>
             </section>
 
             <section className={columnBaseStyle}>
+                <div className={"h-[230px] w-full flex gap-[10px]"}>
+                    <img className={"w-[calc(50%-5px)] object-cover rounded-[30px] h-full"} src={pageData.image_3.image} alt={pageData.image_3.alt}/>
+                    <img className={"w-[calc(50%-5px)] object-cover rounded-[30px] h-full"} src={pageData.image_4.image} alt={pageData.image_4.alt}/>
+                </div>
             </section>
         </main>
     );

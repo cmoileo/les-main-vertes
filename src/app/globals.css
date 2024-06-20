@@ -9,3 +9,13 @@
     text-wrap: balance;
   }
 }
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row !important;
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+}

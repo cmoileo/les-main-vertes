@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
       <html lang="en">
-          <body className={cn(inter.className, "bg-primary-white p-[10px] flex flex-col gap-[10px]")}>
+          <body className={cn(inter.className, "bg-[#F3FBF7] p-[10px] flex flex-col gap-[10px]")}>
               <Header/>
                   {children}
               <Footer/>

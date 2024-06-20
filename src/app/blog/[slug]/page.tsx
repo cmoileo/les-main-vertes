@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: { slug: string }}) 
     }
 }
 
-export default async function page({ params }: { params: { slug: string }}) {
+export default async function Page({ params }: { params: { slug: string }}) {
     const postData: Post = await getPostData(params.slug);
 
     const title = postData.title;

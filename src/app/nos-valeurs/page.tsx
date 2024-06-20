@@ -11,7 +11,7 @@ export default async function Page() {
     const titreText6 = pageData.titretext_6;
     const covers = pageData.photos;
 
-    const titleBaseStyle = 'font-lexend text-[30px] text-primary-black font-semibold text-pretty'
+    const titleBaseStyle = 'font-lexend tracking-[-3px] text-[30px] text-primary-black font-semibold text-pretty'
     const descriptionbaseStyle = 'font-lexend font-regular text-[14px] text-primary-black'
 
 

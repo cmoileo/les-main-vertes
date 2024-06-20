@@ -14,9 +14,9 @@ export interface Post {
     date: string,
     categories: Object,
     slug: string,
-    acfFields: Object
-    author: any
-    thumbnail: string
+    acfFields: Object,
+    thumbnail?: string,
+    author?: string,
 }
 
 export type Product = {

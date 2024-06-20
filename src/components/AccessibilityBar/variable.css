@@ -53,6 +53,8 @@
 .swiper {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
     .swiper-pagination {
         display: flex;
         justify-content: center;

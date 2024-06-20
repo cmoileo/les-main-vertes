@@ -6,6 +6,8 @@
     --primary-blue: #708AFF;
     --primary-white: #FFFFFF;
     --primary-beige: #FAF2EF;
+    --primary-brown: #4C3F34;
+    --primary-purple: #5603AD;
 }
 
 .custom-stroke {
@@ -34,4 +36,13 @@
 }
 .bg-primary-beige {
     background-color: var(--primary-beige);
+}
+.bg-primary-brown {
+    background-color: var(--primary-brown);
+}
+.bg-primary-purple {
+    background-color: var(--primary-purple);
+}
+.transition {
+    transition: 0.3s ease-in-out;
 }

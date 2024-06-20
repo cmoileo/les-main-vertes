@@ -49,3 +49,25 @@
 .h-fill {
     height: -webkit-fill-available;
 }
+
+.swiper {
+    display: flex;
+    flex-direction: column;
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 15px
+    }
+    .swiper-pagination-bullet {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        background-color: #D9D9D9;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: var(--primary-green);
+    }
+}

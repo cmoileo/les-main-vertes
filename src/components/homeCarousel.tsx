@@ -2,55 +2,98 @@
 import {cn} from "../ui/utils.ts";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {useRef} from "react";
+import {Pagination} from "swiper/modules";
+
+const icons = [
+    {
+        icon: (
+            `<svg
+                width="86"
+                height="87"
+                viewBox="0 0 86 87"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect x="0.5" y="1.125" width="75" height="75" stroke="#1A1918" />
+                <rect x="10.5" y="11.125" width="75" height="75" stroke="#1A1918" />
+            </svg>`
+        ),
+    },
+    {
+        icon: (
+            `<svg
+                width="91"
+                height="84"
+                viewBox="0 0 91 84"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect x="0.5" y="1.125" width="75" height="75" stroke="#1A1918" />
+                <path
+                    d="M7.36379 83.25L48.5 12L89.6362 83.25H7.36379Z"
+                    stroke="#1A1918"
+                />
+            </svg>`
+        ),
+    },
+    {
+        icon: (
+            `<svg
+                width="88"
+                height="91"
+                viewBox="0 0 88 91"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <rect x="0.5" y="1.125" width="75" height="75" stroke="#1A1918" />
+                <rect
+                    x="8.5"
+                    y="11.5"
+                    width="79"
+                    height="79"
+                    rx="39.5"
+                    stroke="#1A1918"
+                />
+            </svg>`
+        ),
+    },
+];
 
 export const HomeCarousel = (data: any) => {
     const navigationPrevRef: any = useRef(null)
     const navigationNextRef: any = useRef(null)
     const swiperRef = useRef(null)
 
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+            return `<span class=${className}>${icons[index].icon}</span>`
+        },
+    };
+
     const cellBaseStyle = "rounded-[30px] bg-primary-white"
 
     const titleBaseStyle = 'font-lexend text-white tracking-[-3px] text-[30px] text-primary-black font-semibold text-pretty'
     return (
-        <div className={cn(cellBaseStyle, "w-full px-[30px] h-[230px] flex items-center justify-between overflow-hidden")}>
-            <svg onClick={() => {
-                if (!swiperRef.current) return
-                swiperRef.current.swiper.slidePrev()
-            }} ref={navigationPrevRef} className={"swiper-slide-prev cursor-pointer"} width="36" height="36" viewBox="0 0 36 36" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="18" transform="rotate(180 18 18)" fill="#00813B"/>
-                <path d="M21.4531 28L11.9072 18.4541L21.4531 8.90812" stroke="white" stroke-width="3"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div className={cn(cellBaseStyle, "max-w-full px-[30px] h-[230px] flex items-center justify-between overflow-hidden")}>
             <Swiper
                 ref={swiperRef}
-                className={"h-fit flex w-[75%] overflow-hidden cursor-pointer"}
+                pagination={pagination}
+                modules={[Pagination]}
+                className={"h-fit flex w-[95%] overflow-hidden cursor-pointer"}
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
                 pagination={{
                     "clickable": true,
                 }}
-                navigation={{
-                    nextEl: navigationNextRef.current,
-                    prevEl: navigationPrevRef.current
-                }}
             >
                 {data && data.data.map((item: any, i: number) => (
                     <SwiperSlide key={i}>
-                        <p className={cn(titleBaseStyle)}>{item.bullet_point}</p>
+                        <p className={cn(titleBaseStyle, "text-center")}>{item.bullet_point}</p>
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <svg onClick={() => {
-                if (!swiperRef.current) return
-                swiperRef.current.swiper.slideNext()
-            }} ref={navigationNextRef} className={"swiper-slide-next cursor-pointer"} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="18" fill="#00813B"/>
-                <path d="M14.5459 8L24.0918 17.5459L14.5459 27.0919" stroke="white" stroke-width="3"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-
         </div>
     )
 }

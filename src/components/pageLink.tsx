@@ -6,8 +6,8 @@ export const PageLink = async (data: any) => {
     const titleBaseStyle = 'font-lexend text-white tracking-[-3px] text-[26px] font-semibold text-pretty'
 
     return (
-        <a className={cn(data.data.couleur_de_fond, "flex h-full transition cursor-pointer group relative flex-col p-[20px] justify-between rounded-[30px]")} href={data.data.page_cible}>
-            <h3 className={cn(titleBaseStyle, "absolute top-[20px] left-[20px]")}>{data.data.titre_de_la_navigation}</h3>
+        <a className={cn(data.page.couleur_de_fond, "flex h-full transition cursor-pointer group relative flex-col p-[20px] justify-between rounded-[30px]")} href={data.page.page_cible}>
+            <h3 className={cn(titleBaseStyle, "absolute top-[20px] left-[20px]")}>{data.page.titre_de_la_navigation}</h3>
             <svg className={"transition absolute bottom-[20px] left-[20px] group-hover:translate-x-[-100%] group-hover:left-[calc(100%-20px)]"} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="18" cy="18" r="18" fill="white"/>
                 <path

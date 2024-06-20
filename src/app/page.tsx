@@ -58,7 +58,7 @@ export default async function Home() {
                         <img className={"w-full h-[230px] object-cover rounded-[30px]"} src={pageData.image_2.image} alt={pageData.image_2.image} />
                         <HomeCarousel data={pageData.bullet_points}/>
                     </div>
-                    <img className={"w-1/2 h-full object-cover rounded-[30px]"} src={pageData.image_3.image} alt={pageData.image_3.alt}/>
+                    <img className={"w-[calc(50%-10px)] h-full object-cover rounded-[30px]"} src={pageData.image_3.image} alt={pageData.image_3.alt}/>
                 </div>
             </section>
 

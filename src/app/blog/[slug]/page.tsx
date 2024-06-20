@@ -1,7 +1,6 @@
 import { Post } from "../../../types/types.ts";
 import getPostData from "../../../hook/getPost.ts";
 // import getLatestPosts from "../../../hook/getLatestsPost.ts";
-import Head from "next/head";
 
 export async function generateMetadata({ params }: { params: { slug: string }}) {
     const postData: Post = await getPostData(params.slug);
@@ -51,7 +50,7 @@ export default async function page({ params }: { params: { slug: string }}) {
                     <h1 className={"font-lexend text-white tracking-[-3px] font-semibold text-[44px]"}>{title}</h1>
                     <p className={"font-lexend text-white tracking-[-1px] font-regular text-[16px]"}>{formatDate(postData.date)} par {postData.author}</p>
                 </div>
-                <img src={postData.thumbnail} alt={postData.title} className={"w-[30%] object-cover h-[300px] rounded-[30px]"}/>
+                <img src={postData.thumbnail || ""} alt={postData.title} className={"w-[30%] object-cover h-[300px] rounded-[30px]"}/>
             </div>
             <div className={"flex gap-[15px]"}>
                 <aside

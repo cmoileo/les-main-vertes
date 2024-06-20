@@ -20,7 +20,7 @@ export const Form = () => {
             ...form,
             "text-1": checked
         }
-        const res = await fetch("http://localhost:8887/wp-json/custom/v2/submit-form", {
+        await fetch("http://localhost:8887/wp-json/custom/v2/submit-form", {
             method: "POST",
             body: JSON.stringify(formData)
         })

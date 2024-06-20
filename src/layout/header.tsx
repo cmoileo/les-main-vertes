@@ -3,8 +3,6 @@ import { MenuItem } from "../types/types";
 import Image from "next/image";
 // @ts-ignore
 import Logo from '../../public/Group 6.svg';
-import Link from "next/link";
-
 export default async function MenuComponent() {
     const menu = await getMenu("top-left-1")
 

@@ -135,7 +135,7 @@ export default async function Home() {
                             console.log(bgColor)
                             return (
                                 <a className={cn(bgColor, "flex w-full h-full transition cursor-pointer group relative flex-col p-[20px] justify-between rounded-[30px]")}
-                                   href={post.slug}>
+                                   href={"/blog/" + post.slug}>
                                     <p className={cn(descriptionbaseStyle, "font-semibold text-white text-[12px]")}>Article - {formatDate(post.date)}</p>
                                     <h3 className={cn(titleBaseStyle, "text-white absolute top-[50px] left-[20px]")}>{post.title.rendered}</h3>
                                     <svg

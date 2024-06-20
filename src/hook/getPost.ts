@@ -13,7 +13,7 @@ export default async function getPostData(prop: string) {
     const slug = postData.slug
     const acfFields = postData.acf
     const author = await getAuthorName(postData.author);
-    const thumbnail = await getMediaById(postData.featured_media);
+    const thumbnail = postData.featured_media ? await getMediaById(postData.featured_media) : null;
 
     const post: Post = {
         title, content, date, categories, slug, acfFields, author, thumbnail

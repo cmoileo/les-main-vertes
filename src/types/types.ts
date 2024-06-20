@@ -15,7 +15,7 @@ export interface Post {
     categories: Object,
     slug: string,
     acfFields: Object,
-    thumbnail?: string,
+    thumbnail: string | null,
     author?: string,
 }
 

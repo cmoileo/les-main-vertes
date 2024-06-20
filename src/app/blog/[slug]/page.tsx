@@ -1,6 +1,5 @@
 import { Post } from "../../../types/types.ts";
 import getPostData from "../../../hook/getPost.ts";
-// import getLatestPosts from "../../../hook/getLatestsPost.ts";
 
 export async function generateMetadata({ params }: { params: { slug: string }}) {
     const postData: Post = await getPostData(params.slug);
@@ -12,8 +11,6 @@ export async function generateMetadata({ params }: { params: { slug: string }}) 
 
 export default async function page({ params }: { params: { slug: string }}) {
     const postData: Post = await getPostData(params.slug);
-    // const lastPosts: Post[] = await getLatestPosts(3);
-    console.log("thumbnail", postData.thumbnail);
 
     const title = postData.title;
     const acfFields: any = postData.acfFields;

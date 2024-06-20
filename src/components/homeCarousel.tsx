@@ -60,16 +60,7 @@ const icons = [
 ];
 
 export const HomeCarousel = (data: any) => {
-    const navigationPrevRef: any = useRef(null)
-    const navigationNextRef: any = useRef(null)
     const swiperRef = useRef(null)
-
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index, className) {
-            return `<span class=${className}>${icons[index].icon}</span>`
-        },
-    };
 
     const cellBaseStyle = "rounded-[30px] bg-primary-white"
 
@@ -78,7 +69,6 @@ export const HomeCarousel = (data: any) => {
         <div className={cn(cellBaseStyle, "max-w-full px-[30px] h-[230px] flex items-center justify-between overflow-hidden")}>
             <Swiper
                 ref={swiperRef}
-                pagination={pagination}
                 modules={[Pagination]}
                 className={"h-fit flex w-[95%] overflow-hidden cursor-pointer"}
                 slidesPerView={1}
@@ -86,6 +76,9 @@ export const HomeCarousel = (data: any) => {
                 loop={true}
                 pagination={{
                     "clickable": true,
+                    renderBullet: function (index: number, className: string) {
+                        return `<span class=${className}>${icons[index].icon}</span>`
+                    },
                 }}
             >
                 {data && data.data.map((item: any, i: number) => (

@@ -12,7 +12,7 @@ export const PageLink2 = async ({data, gridColumn}: {data: any, gridColumn: stri
                href={"/nos-valeurs" + data.page_cible}>
                 <h3 className={cn(titleBaseStyle, "absolute top-[20px] left-[20px]")}>{data.titre_de_la_navigation}</h3>
                 <svg
-                    className={"transition absolute bottom-[20px] left-[20px] group-hover:translate-x-[-100%] group-hover:left-[calc(100%-20px)]"}
+                    className={"transition absolute bottom-[20px] left-[20px] group-hover:rotate-[45deg]"}
                     width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="18" cy="18" r="18" fill="white"/>
                     <path

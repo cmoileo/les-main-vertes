@@ -139,7 +139,7 @@ export default async function Home() {
                                     <p className={cn(descriptionbaseStyle, "font-semibold text-white text-[12px]")}>Article - {formatDate(post.date)}</p>
                                     <h3 className={cn(titleBaseStyle, "text-white absolute top-[50px] left-[20px]")}>{post.title.rendered}</h3>
                                     <svg
-                                        className={"transition absolute bottom-[20px] left-[20px] group-hover:translate-x-[-100%] group-hover:left-[calc(100%-20px)]"}
+                                        className={"transition absolute bottom-[20px] left-[20px] group-hover:rotate-[45deg]"}
                                         width="36" height="36" viewBox="0 0 36 36" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="18" cy="18" r="18" fill="white"/>

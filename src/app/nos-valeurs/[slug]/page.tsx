@@ -11,7 +11,7 @@ export default async function page({ params }: { params: { slug: string }}) {
                 <div className={"flex flex-col"}>
                     <p className={"text-[22px] font-semibold text-black font-lexend"}>{pageData.titre_1}</p>
                     <div className={"content mt-[20px]"} dangerouslySetInnerHTML={{__html: pageData.description_1}}></div>
-                    <a className={"mt-[30px] bg-primary-green text-center rounded-full text-[16px] py-[12px] px-[24px] w-fit text-white font-lexend"} href={pageData.bouton.lien}>{pageData.bouton.texte_du_bouton.replace("https://leo-fezard.com", "https://les-main-vertes.vercel.app")}</a>
+                    <a className={"mt-[30px] bg-primary-green text-center rounded-full text-[16px] py-[12px] px-[24px] w-fit text-white font-lexend"} href={pageData.bouton.lien.replace("https://leo-fezard.com", "https://les-main-vertes.vercel.app")}>{pageData.bouton.texte_du_bouton}</a>
                 </div>
                 <div className={"flex gap-[10px]"}>
                     <div className={"flex flex-col gap-[10px]"}>
